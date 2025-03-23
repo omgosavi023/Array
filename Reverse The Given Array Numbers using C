@@ -1,0 +1,24 @@
+#include<stdio.h>
+void reverse_num(int*,int);
+void main()
+{
+	int i,size=0;
+	printf("Enter The size of array");
+	scanf("%d",&size);
+	int arr[size];
+	for(i=0;i<size;i++)
+	{
+		printf("\nEnter the number arr[%d]",i);
+		scanf("%d",&arr[i]);
+	}
+	reverse_num(arr,size);
+}
+void reverse_num(int*ptr1,int s)
+{
+	int i;
+	printf("\nReverese Number of  given array elements are = ");
+	for(i=s-1;i>=0;i--)
+	{
+		printf("\t\n%d",ptr1[i]);
+	}
+}
