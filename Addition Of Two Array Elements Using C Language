@@ -1,0 +1,31 @@
+#include<stdio.h>
+void sum(int*,int*,int);
+void main()
+{
+	int size,i;
+	printf("Enter the Size of Array");
+	scanf("%d",&size);
+	int arr[size];
+	for(i=0;i<size;i++)
+	{
+		printf("\nEnter the number in arr[%d]",i);
+		scanf("%d",&arr[i]);
+	}
+	int brr[size];
+	for(i=0;i<size;i++)
+	{
+		printf("\nEnter the number in brr[%d]",i);
+		scanf("%d",&brr[i]);
+	}
+	sum(arr,brr,size);
+}
+void sum(int* ptr1,int*ptr2,int s)
+{
+	int add=0;
+	int i;
+	for(i=0;i<s;i++)
+	{
+		add=ptr1[i] + ptr2[i];
+		printf("\n addition of array elements arr[%d] + brr[%d] = %d",i,i,add);
+	}
+}
