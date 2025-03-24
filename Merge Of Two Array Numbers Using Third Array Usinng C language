@@ -1,0 +1,40 @@
+#include<stdio.h>
+void merge(int*,int*,int,int);
+void main()
+{
+	int i,n,m;
+    printf("Enter the size of First array = ");
+    scanf("%d",&n);
+	int arr[n];
+	for(i=0;i<n;i++)
+	{
+		printf("\nEnter the numbers is arr[%d]",i);
+		scanf("%d",&arr[i]);
+	}
+	printf("\nEnter the size of Second array = ");
+	scanf("%d",&m);
+	int brr[m];
+	for(i=0;i<m;i++)
+	{
+		printf("\nEnter the Numbers is brr[%d]",i);
+		scanf("%d",&brr[i]);
+	}
+	merge(arr,brr,n,m);
+}
+void merge(int* ptr1,int*ptr2 ,int n1,int m1)
+{
+	int i,j;
+	int crr[n1+m1];
+	printf("\tThe Merge Array Is ");
+	for(i=0;i<n1;i++)
+	{
+		crr[i]=ptr1[i];
+		printf("\t%d",crr[i]);
+	}
+	for(j=0;j<m1;j++)
+	{
+		crr[n1+j]=ptr2[j];
+		printf("\t%d",crr[n1+j]);
+	}
+	
+}
